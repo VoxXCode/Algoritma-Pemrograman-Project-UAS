@@ -3,11 +3,13 @@ package org.example.algorithms.dijkstra;
 import java.util.*;
 
 public class DijkstraSolver {
-    private int V; // Jumlah vertices (titik)
-    private List<List<Node>> adj; // Adjacency List
+    private int V;
+    private List<List<Node>> adj;
+    private int[] parent; // Pindahkan ke sini agar bisa diakses public
+    private int[] dist;   // Simpan jarak juga
 
-    // Class internal untuk representasi Edge/Node tetangga
-    static class Node implements Comparator<Node> {
+    // Class Node tetap sama, pastikan public static agar bisa diakses Controller
+    public static class Node implements Comparator<Node> {
         public int node;
         public int cost;
 
@@ -18,54 +20,67 @@ public class DijkstraSolver {
         }
 
         @Override
-        public int compare(Node node1, Node node2) {
-            return Integer.compare(node1.cost, node2.cost);
+        public int compare(Node n1, Node n2) {
+            return Integer.compare(n1.cost, n2.cost);
         }
     }
 
     public DijkstraSolver(int V) {
         this.V = V;
         adj = new ArrayList<>();
-        for (int i = 0; i < V; i++) {
-            adj.add(new ArrayList<>());
-        }
+        for (int i = 0; i < V; i++) adj.add(new ArrayList<>());
     }
 
-    // Input data graph dari User
     public void addEdge(int source, int dest, int weight) {
         adj.get(source).add(new Node(dest, weight));
-        // Jika graph tidak berarah (undirected), tambahkan baris ini:
-        // adj.get(dest).add(new Node(source, weight));
     }
+
+    // Getter untuk Visualisasi di Controller
+    public List<List<Node>> getAdj() { return adj; }
 
     public void solve(int src) {
-        // TODO: Implementasi logika PriorityQueue untuk Dijkstra di sini
         PriorityQueue<Node> pq = new PriorityQueue<>(V, new Node());
-
-        // Array jarak, inisialisasi dengan MAX_VALUE
-        int[] dist = new int[V];
+        dist = new int[V];
+        parent = new int[V];
         Arrays.fill(dist, Integer.MAX_VALUE);
+        Arrays.fill(parent, -1);
 
-        // Masukkan source node
-        pq.add(new Node(src, 0));
         dist[src] = 0;
+        pq.add(new Node(src, 0));
 
         while (!pq.isEmpty()) {
-            // Logika utama Dijkstra...
-            // 1. Ambil node dengan jarak terpendek
-            // 2. Iterasi tetangganya
-            // 3. Update jarak jika ditemukan jalur lebih pendek
-            Node u = pq.poll();
-            // ... (lanjutkan implementasi)
-        }
+            int u = pq.poll().node;
 
-        // Print hasil
-        printSolution(dist, src);
+            for (Node neighbor : adj.get(u)) {
+                int v = neighbor.node;
+                int weight = neighbor.cost;
+
+                if (dist[u] != Integer.MAX_VALUE && dist[u] + weight < dist[v]) {
+                    dist[v] = dist[u] + weight;
+                    parent[v] = u;
+                    pq.add(new Node(v, dist[v]));
+                }
+            }
+        }
     }
 
-    private void printSolution(int[] dist, int src) {
-        System.out.println("Jarak terpendek dari Node " + src + ":");
-        for (int i = 0; i < V; i++)
-            System.out.println(src + " -> " + i + " : " + dist[i]);
+    // Method baru: Mengambil urutan node jalur terpendek
+    public List<Integer> getPath(int target) {
+        List<Integer> path = new ArrayList<>();
+        if (dist == null || target >= V || dist[target] == Integer.MAX_VALUE) {
+            return path; // Kosong jika tidak ada jalur
+        }
+
+        for (int v = target; v != -1; v = parent[v]) {
+            path.add(v);
+        }
+        Collections.reverse(path); // Balik urutan agar dari Source -> Dest
+        return path;
+    }
+
+    // Ambil total jarak
+    public int getDistance(int target) {
+        if (dist == null || target >= V) return -1;
+        return dist[target];
     }
 }
