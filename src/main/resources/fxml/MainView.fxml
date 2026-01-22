@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.ui.controllers.MainController"
+      stylesheets="@../styles/styles.css"> <padding>
+    <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+</padding>
+
+    <Label text="Algoritma Pemrograman UAS" styleClass="header-label" />
+
+    <Button text="Binary Search Tree (BST)" onAction="#onOpenBST" maxWidth="250" styleClass="button"/>
+    <Button text="Algoritma Dijkstra" onAction="#onOpenDijkstra" maxWidth="250" styleClass="button"/>
+
+    <Button text="Keluar" onAction="#onExit" maxWidth="250" styleClass="button, button-danger"/>
+</VBox>

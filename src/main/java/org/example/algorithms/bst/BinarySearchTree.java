@@ -1,31 +1,34 @@
 package org.example.algorithms.bst;
 
-class Node {
-    int key;
-    Node left, right;
-
-    public Node(int item) {
-        key = item;
-        left = right = null;
-    }
-}
-
 public class BinarySearchTree {
-    Node root;
+
+    // 1. Buat Node jadi public static agar bisa diakses Visualizer
+    public static class Node {
+        public int key;
+        public Node left, right;
+
+        public Node(int item) {
+            key = item;
+            left = right = null;
+        }
+    }
+
+    private Node root;
 
     public BinarySearchTree() {
         root = null;
     }
 
-    // --- FITUR 1: INSERT (Input Nilai) ---
+    // 2. Getter Root untuk Controller
+    public Node getRoot() {
+        return root;
+    }
+
     public void insert(int key) {
         root = insertRec(root, key);
     }
 
     private Node insertRec(Node root, int key) {
-        // TODO: Lengkapi logika insert BST di sini
-        // Jika tree kosong, return node baru
-        // Jika key < root.key, ke kiri. Jika key > root.key, ke kanan.
         if (root == null) {
             root = new Node(key);
             return root;
@@ -38,20 +41,52 @@ public class BinarySearchTree {
         return root;
     }
 
-    // --- FITUR 2: TRAVERSAL (PreOrder, InOrder, PostOrder) ---
-    public void inorder() {
-        System.out.print("InOrder: ");
-        inorderRec(root);
-        System.out.println();
+    // 3. Ubah Traversal agar mengembalikan String (untuk ditampilkan di UI)
+    public String getInOrder() {
+        StringBuilder sb = new StringBuilder();
+        inorderRec(root, sb);
+        return sb.toString();
     }
-
-    private void inorderRec(Node root) {
-        // TODO: Lengkapi logika InOrder (Left, Root, Right)
+    private void inorderRec(Node root, StringBuilder sb) {
         if (root != null) {
-            inorderRec(root.left);
-            System.out.print(root.key + " ");
-            inorderRec(root.right);
+            inorderRec(root.left, sb);
+            sb.append(root.key).append(" ");
+            inorderRec(root.right, sb);
         }
     }
 
+    public String getPreOrder() {
+        StringBuilder sb = new StringBuilder();
+        preorderRec(root, sb);
+        return sb.toString();
+    }
+    private void preorderRec(Node root, StringBuilder sb) {
+        if (root != null) {
+            sb.append(root.key).append(" ");
+            preorderRec(root.left, sb);
+            preorderRec(root.right, sb);
+        }
+    }
+
+    public String getPostOrder() {
+        StringBuilder sb = new StringBuilder();
+        postorderRec(root, sb);
+        return sb.toString();
+    }
+    private void postorderRec(Node root, StringBuilder sb) {
+        if (root != null) {
+            postorderRec(root.left, sb);
+            postorderRec(root.right, sb);
+            sb.append(root.key).append(" ");
+        }
+    }
+
+    public boolean search(int key) {
+        return searchRec(root, key);
+    }
+    private boolean searchRec(Node root, int key) {
+        if (root == null) return false;
+        if (root.key == key) return true;
+        return key < root.key ? searchRec(root.left, key) : searchRec(root.right, key);
+    }
 }
