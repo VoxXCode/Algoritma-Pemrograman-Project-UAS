@@ -67,9 +67,16 @@ Jika muncul error **"JavaFX runtime components are missing"**:
 
 1. Klik menu **Run** > **Edit Configurations**.
 2. Klik **Modify options** > **Add VM options**.
-3. Tambahkan baris berikut (sesuaikan dengan lokasi folder lib JavaFX Anda):
+3. Tambahkan baris berikut pada **VM options** (sesuaikan dengan lokasi folder lib JavaFX Anda):
+
+Example:
 ```text
 --module-path "C:\path\to\javafx-sdk\lib" --add-modules javafx.controls,javafx.fxml
+```
+
+Text template:
+```text
+--module-path "..." --add-modules javafx.controls,javafx.fxml
 ```
 
 ---
@@ -97,6 +104,12 @@ Aplikasi ini membutuhkan **Java Runtime Environment (JRE)** atau **JDK** minimal
 ```text
 java -jar Algoritma Pemrograman Project UAS 1.0.jar
 ```
+
+   **Atau**:
+   
+   * Bisa juga Klik 2x pada file **Algoritma Pemrograman Project UAS 1.0.jar**
+
+
     
   ### 2. Cara Menjalankan di Ubuntu (Linux)
 1. **Instalasi Java & JavaFX**:
@@ -123,4 +136,5 @@ Input User: Gunakan kolom input yang tersedia di GUI untuk memasukkan angka ke d
 Visualisasi: Tekan tombol "Generate" atau "Solve" untuk melihat proses algoritma berjalan.
 
 ---
+
 
