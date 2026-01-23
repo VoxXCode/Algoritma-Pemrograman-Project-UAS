@@ -105,9 +105,11 @@ Aplikasi ini membutuhkan **Java Runtime Environment (JRE)** atau **JDK** minimal
 java -jar Algoritma Pemrograman Project UAS 1.0.jar
 ```
 
-   **Atau**:
-   
-   * Bisa juga Klik 2x pada file **Algoritma Pemrograman Project UAS 1.0.jar**
+**Atau**
+Bisa juga Klik 2x pada file:
+```text
+Algoritma Pemrograman Project UAS 1.0.jar
+```
 
 
     
@@ -136,5 +138,6 @@ Input User: Gunakan kolom input yang tersedia di GUI untuk memasukkan angka ke d
 Visualisasi: Tekan tombol "Generate" atau "Solve" untuk melihat proses algoritma berjalan.
 
 ---
+
 
 
