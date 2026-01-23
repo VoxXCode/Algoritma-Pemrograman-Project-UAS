@@ -2,11 +2,6 @@
 
 Proyek ini adalah aplikasi desktop berbasis Java yang mengimplementasikan visualisasi algoritma **Binary Search Tree (BST)** dan **Dijkstra's Shortest Path**.
 
-## 📥 Link Download
-Dapatkan file eksekutif (.jar) melalui tautan di bawah ini:
-
- **[Download Project UAS v1.0 (.jar)](https://drive.google.com/file/d/1pnnH_WzoLBvedpzWbh9wG4Ho1F0MfSjF/view?usp=sharing)**
-
 ---
 
 ## ✨ Fitur Utama
@@ -20,7 +15,14 @@ Aplikasi ini menyediakan visualisasi untuk:
    * Visualisasi pencarian rute terpendek (shortest path) pada graf.
    * Menampilkan bobot antar simpul dan rute yang terpilih.
 
-# 🚀 Panduan Menjalankan Aplikasi
+---
+## 📥 Clone Repository:
+  Buka Terminal dan jalankan perintah:
+```text
+git clone https://github.com/VoxXCode/Algoritma-Pemrograman-Project-UAS.git
+```
+
+## 🚀 Panduan Menjalankan Aplikasi menggunakan IntelliJ IDEA.
 
 Ikuti panduan langkah demi langkah di bawah ini untuk menjalankan **Aplikasi Visualisasi Algoritma** menggunakan IntelliJ IDEA.
 
@@ -29,6 +31,7 @@ Ikuti panduan langkah demi langkah di bawah ini untuk menjalankan **Aplikasi Vis
 * **JDK 24** atau versi yang lebih baru (Disarankan menggunakan **Amazon Corretto** atau **Oracle OpenJDK**).
 * **IntelliJ IDEA** (Ultimate atau Community Edition).
 * **JavaFX SDK** (Jika library tidak dikelola oleh Maven/Gradle).
+
 
 ## 2. Buka Proyek
 
@@ -53,33 +56,10 @@ Pastikan Anda menggunakan JDK 11 atau versi di atasnya:
 
 ## 5. Jalankan Aplikasi
 
-1. Buka folder `src/main/`.
-2. Temukan file bernama **`MainApp.java`**.
+1. Buka folder `/src/main/java/org/example/main`.
+2. Temukan file bernama **`Main.java`**.
 3. **Klik kanan** pada file tersebut.
-4. Pilih **Run 'MainApp.main()'**.
-
-## 🚀 Panduan Menjalankan Aplikasi
-
-Aplikasi ini membutuhkan **Java Runtime Environment (JRE)** atau **JDK** minimal versi 11 (disarankan versi 17 atau yang lebih baru).
-
-### 1. Cara Menjalankan di Windows
-1. **Cek Java**: Buka Command Prompt (CMD) dan ketik `java -version`. 
-   * *Jika belum terinstal, unduh di [Azul Zulu (Full JDK)](https://www.azul.com/downloads/?package=jdk) agar library JavaFX sudah termasuk.*
-2. **Buka Folder**: Masuk ke direktori tempat file `.jar` berada.
-3. **Jalankan**:
-   * Klik kanan di area kosong folder sambil menahan tombol `Shift`, lalu pilih **"Open PowerShell window here"**.
-   * Jalankan perintah:
-     ```bash
-     java -jar Algoritma-Pemrograman-Project-UAS-1.0-SNAPSHOT.jar
-    ```
-  ### 2. Cara Menjalankan di Ubuntu (Linux)
-1. **Instalasi Java & JavaFX**:
-   Buka Terminal dan jalankan perintah:
-   ```bash
-   sudo apt update
-   sudo apt install openjdk-17-jdk openjfx
-
-
+4. Pilih **Run 'Main.main()'**.
 
 ## 🛠 Troubleshooting
 
@@ -91,6 +71,48 @@ Jika muncul error **"JavaFX runtime components are missing"**:
 ```text
 --module-path "C:\path\to\javafx-sdk\lib" --add-modules javafx.controls,javafx.fxml
 ```
+
+---
+
+## 📥 Link Download .jar:
+
+ **[Download Project UAS v1.0 (.jar)](https://drive.google.com/file/d/1pnnH_WzoLBvedpzWbh9wG4Ho1F0MfSjF/view?usp=sharing)**
+
+
+## 🚀 Panduan Menjalankan Aplikasi menggunakan .jar
+
+Aplikasi ini membutuhkan **Java Runtime Environment (JRE)** atau **JDK** minimal versi 11 (disarankan versi 17 atau yang lebih baru).
+
+* **JDK 17 atau versi terbaru** (Disarankan Amazon Corretto atau Azul Zulu karena sudah termasuk library JavaFX).
+* **RAM:** Minimal 4GB.
+* **OS:** Windows / Ubuntu (Linux) / macOS.
+
+### 1. Cara Menjalankan di Windows
+1. **Cek Java**: Buka Command Prompt (CMD) dan ketik `java -version`. 
+   * *Jika belum terinstal, unduh di [Azul Zulu (Full JDK)](https://www.azul.com/downloads/?package=jdk) agar library JavaFX sudah termasuk.*
+2. **Buka Folder**: Masuk ke direktori tempat file `.jar` berada.
+3. **Jalankan**:
+   * Klik kanan di area kosong folder sambil menahan tombol `Shift`, lalu pilih **"Open PowerShell window here"**.
+   * Jalankan perintah:
+```text
+java -jar Algoritma Pemrograman Project UAS 1.0.jar
+```
+    
+  ### 2. Cara Menjalankan di Ubuntu (Linux)
+1. **Instalasi Java & JavaFX**:
+   Buka Terminal dan jalankan perintah:
+```text
+sudo apt update
+sudo apt install openjdk-17-jdk openjfx
+```
+
+2. **Menjalankan Aplikasi**:
+   Masuk ke direktori tempat Anda menyimpan file tersebut (misalnya di folder `Downloads`), lalu jalankan perintah `java -jar`:
+```text
+cd ~/Downloads
+java -jar Algoritma Pemrograman Project UAS 1.0.jar
+```
+
 ---
 
 🖥️ Panduan Penggunaan (Interaktif)
@@ -101,7 +123,4 @@ Input User: Gunakan kolom input yang tersedia di GUI untuk memasukkan angka ke d
 Visualisasi: Tekan tombol "Generate" atau "Solve" untuk melihat proses algoritma berjalan.
 
 ---
-
-
-
 
