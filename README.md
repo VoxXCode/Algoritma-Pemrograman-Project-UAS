@@ -8,7 +8,7 @@ Dapatkan file eksekutif (.jar) melalui tautan di bawah ini:
 * **[Download Project UAS v1.0 (.jar)](https://drive.google.com/file/d/1pnnH_WzoLBvedpzWbh9wG4Ho1F0MfSjF/view?usp=sharing)**
 
 ---
----
+
 ## ✨ Fitur Utama
 Aplikasi ini menyediakan visualisasi untuk:
 1. **Binary Search Tree (BST)**: 
@@ -101,5 +101,6 @@ Input User: Gunakan kolom input yang tersedia di GUI untuk memasukkan angka ke d
 Visualisasi: Tekan tombol "Generate" atau "Solve" untuk melihat proses algoritma berjalan.
 
 ---
+
 
 
