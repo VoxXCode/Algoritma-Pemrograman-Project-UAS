@@ -3,6 +3,17 @@
 Proyek ini adalah aplikasi desktop berbasis Java yang mengimplementasikan visualisasi algoritma **Binary Search Tree (BST)** dan **Dijkstra's Shortest Path**.
 
 ---
+🚀 Fitur Utama
+Aplikasi ini mencakup visualisasi interaktif untuk:
+
+
+Binary Search Tree (BST): Visualisasi penambahan, pencarian, dan penghapusan node dalam struktur pohon biner.
+
+
+Dijkstra Algorithm: Visualisasi pencarian rute terpendek dalam graf menggunakan algoritma Dijkstra.
+
+
+Antarmuka Modern: Menggunakan JavaFX dengan gaya visual yang dikelola melalui CSS untuk pengalaman pengguna yang lebih baik.
 
 # 🚀 Panduan Menjalankan Aplikasi
 
@@ -62,3 +73,4 @@ Input User: Gunakan kolom input yang tersedia di GUI untuk memasukkan angka ke d
 Visualisasi: Tekan tombol "Generate" atau "Solve" untuk melihat proses algoritma berjalan.
 
 ---
+
