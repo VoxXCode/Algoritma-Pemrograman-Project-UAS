@@ -3,17 +3,16 @@
 Proyek ini adalah aplikasi desktop berbasis Java yang mengimplementasikan visualisasi algoritma **Binary Search Tree (BST)** dan **Dijkstra's Shortest Path**.
 
 ---
-🚀 Fitur Utama
-Aplikasi ini mencakup visualisasi interaktif untuk:
+## ✨ Fitur Utama
+Aplikasi ini menyediakan visualisasi untuk:
+1. **Binary Search Tree (BST)**: 
+   * Visualisasi penambahan (insert), pencarian (search), dan penghapusan (delete) node.
+   * Membantu memahami struktur hierarki pohon biner secara visual.
+   
 
-
-Binary Search Tree (BST): Visualisasi penambahan, pencarian, dan penghapusan node dalam struktur pohon biner.
-
-
-Dijkstra Algorithm: Visualisasi pencarian rute terpendek dalam graf menggunakan algoritma Dijkstra.
-
-
-Antarmuka Modern: Menggunakan JavaFX dengan gaya visual yang dikelola melalui CSS untuk pengalaman pengguna yang lebih baik.
+2. **Dijkstra Algorithm**: 
+   * Visualisasi pencarian rute terpendek (shortest path) pada graf.
+   * Menampilkan bobot antar simpul dan rute yang terpilih.
 
 # 🚀 Panduan Menjalankan Aplikasi
 
@@ -52,6 +51,29 @@ Pastikan Anda menggunakan JDK 11 atau versi di atasnya:
 2. Temukan file bernama **`MainApp.java`**.
 3. **Klik kanan** pada file tersebut.
 4. Pilih **Run 'MainApp.main()'**.
+
+## 🚀 Panduan Menjalankan Aplikasi
+
+Aplikasi ini membutuhkan **Java Runtime Environment (JRE)** atau **JDK** minimal versi 11 (disarankan versi 17 atau yang lebih baru).
+
+### 1. Cara Menjalankan di Windows
+1. **Cek Java**: Buka Command Prompt (CMD) dan ketik `java -version`. 
+   * *Jika belum terinstal, unduh di [Azul Zulu (Full JDK)](https://www.azul.com/downloads/?package=jdk) agar library JavaFX sudah termasuk.*
+2. **Buka Folder**: Masuk ke direktori tempat file `.jar` berada.
+3. **Jalankan**:
+   * Klik kanan di area kosong folder sambil menahan tombol `Shift`, lalu pilih **"Open PowerShell window here"**.
+   * Jalankan perintah:
+     ```bash
+     java -jar Algoritma-Pemrograman-Project-UAS-1.0-SNAPSHOT.jar
+    ```
+  ### 2. Cara Menjalankan di Ubuntu (Linux)
+1. **Instalasi Java & JavaFX**:
+   Buka Terminal dan jalankan perintah:
+   ```bash
+   sudo apt update
+   sudo apt install openjdk-17-jdk openjfx
+
+
 
 ## 🛠 Troubleshooting
 
